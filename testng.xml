@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite" verbose="1" parallel="tests" thread-count="2">
+    <test name="Regression Tests 1">
+        <groups>
+            <run>
+                <include name="Regression1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="SwoopFeatureTest"/>
+        </classes>
+    </test>
+    <test name="Regression Tests 2">
+        <groups>
+            <run>
+                <include name="Regression2"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="SwoopFeatureTest"/>
+        </classes>
+    </test>
+</suite>
