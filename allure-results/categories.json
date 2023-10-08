@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Success tests",
+    "matchedStatuses": [
+      "passed"
+    ]
+  },
+  {
+    "name": "Ignored tests",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Product defects",
+    "matchedStatuses": [
+      "failed"
+    ]
+  },
+  {
+    "name": "Test defects",
+    "matchedStatuses": [
+      "broken"
+    ]
+  },
+  {
+    "name": "Outdated tests",
+    "matchedStatuses": [
+      "broken",
+      "failed"
+    ],
+    "traceRegex": ".*FileNotFoundException.*"
+  },
+  {
+    "name": "UI responsiveness defects",
+    "matchedStatuses": [
+      "broken",
+      "failed"
+    ],
+    "traceRegex": ".*ElementClickInterceptedException.*"
+  }
+]
