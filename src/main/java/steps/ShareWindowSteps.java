@@ -3,7 +3,7 @@ package steps;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import pages.ShareWindowPage;
-import util.CommonData;
+import data.CommonData;
 import util.HelperFunctions;
 
 public class ShareWindowSteps {
