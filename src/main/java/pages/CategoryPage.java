@@ -2,7 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import util.CommonData;
+import data.CommonData;
 
 import static com.codeborne.selenide.Selenide.$;
 

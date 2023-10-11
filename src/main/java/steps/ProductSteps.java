@@ -3,7 +3,7 @@ package steps;
 import com.codeborne.selenide.ClickOptions;
 import io.qameta.allure.Step;
 import pages.ProductPage;
-import util.CommonData;
+import data.CommonData;
 
 public class ProductSteps {
     private ProductPage productPage = new ProductPage();

@@ -10,7 +10,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import steps.*;
-import util.CommonData;
+import data.CommonData;
 import util.TestListener;
 
 import java.sql.SQLException;

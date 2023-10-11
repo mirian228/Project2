@@ -1,4 +1,4 @@
-package util;
+package data;
 
 public class CommonData {
     public static final String SWOOP_URL = "https://www.swoop.ge";
