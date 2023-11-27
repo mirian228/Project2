@@ -10,19 +10,21 @@ pipeline {
         }
         stage('Run Maven Project') {
             parallel {
-            steps {
-                script {
-                    sh 'mvn clean test'
+                stage('Run Maven Tests') {
+                    steps {
+                        script {
+                            sh 'mvn clean test'
+                        }
+                    }
                 }
-            }
-        }
-        stage('Get Maven Version') {
-            steps {
-                script {
-                    sh 'mvn --version'
+                stage('Get Maven Version') {
+                    steps {
+                        script {
+                            sh 'mvn --version'
+                        }
+                    }
                 }
             }
         }
     }
-}
 }
