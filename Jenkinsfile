@@ -1,60 +1,27 @@
 pipeline {
-  agent any
-  stages {
-    stage('Run Maven Project') {
-      parallel {
+    agent any
+    stages {
+        stage('Checkout with Your Branch') {
+            steps {
+                script {
+                    // Replace 'your-branch' with the name of your branch
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/mirian228/Project2']]])
+                }
+            }
+        }
         stage('Run Maven Project') {
-          steps {
-            script {
-              pipeline {
-                agent any
-                stages {
-                  stage('Run Maven Project') {
-                    steps {
-                      script {
-                        // Add Maven build and run commands here
-                        sh 'mvn clean test'
-                      }
-                    }
-                  }
+            steps {
+                script {
+                    sh 'mvn clean test'
                 }
-              }
             }
-
-          }
         }
-
-        stage('Maven version') {
-          steps {
-            script {
-              pipeline {
-                agent any
-                stages {
-                  stage('Run Maven Project') {
-                    steps {
-                      script {
-                        // Add Maven build and run commands here
-                        sh 'mvn clean test'
-                      }
-                    }
-                  }
-                  stage('Get Maven Version') {
-                    steps {
-                      script {
-                        // Get Maven version
-                        sh 'mvn --version'
-                      }
-                    }
-                  }
+        stage('Get Maven Version') {
+            steps {
+                script {
+                    sh 'mvn --version'
                 }
-              }
             }
-
-          }
         }
-
-      }
     }
-
-  }
 }
